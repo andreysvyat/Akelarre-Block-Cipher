@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "compile"
+javac -cp Algorithm/* -d j_build Algorithm/Akelarre.java Algorithm/KeyScheduler.java
+echo "run"
+java -cp j_build Akelarre.Akelarre "$@"
+echo "remove compiled"
+rm -rf j_build
